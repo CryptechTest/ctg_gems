@@ -76,3 +76,16 @@ if core.get_modpath("3d_armor") then
 		},
 	})
 end
+
+if core.get_modpath('shields') then
+    local k = "crystal"
+	local v = "ctg_sapphire:sapphire_block"
+	minetest.register_craft({
+		output = "shields:shield_"..k,
+		recipe = {
+			{v, v, v},
+			{v, v, v},
+			{"", v, ""},
+		},
+	})
+end

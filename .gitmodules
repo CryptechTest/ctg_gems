@@ -1,0 +1,6 @@
+[submodule "ctg_quartz"]
+	path = ctg_quartz
+	url = git@github.com:CryptechTest/ctg_quartz.git
+[submodule "amethyst_new"]
+	path = amethyst_new
+	url = git@github.com:CryptechTest/amethyst_new.git

@@ -44,7 +44,7 @@ core.register_craft({
 if core.get_modpath("3d_armor") then
     local s = "crystal"
 	local m = "ctg_sapphire:sapphire_block"
-	minetest.register_craft({
+	core.register_craft({
 		output = "3d_armor:helmet_"..s,
 		recipe = {
 			{m, m, m},
@@ -52,7 +52,7 @@ if core.get_modpath("3d_armor") then
 			{"", "", ""},
 		},
 	})
-	minetest.register_craft({
+	core.register_craft({
 		output = "3d_armor:chestplate_"..s,
 		recipe = {
 			{m, "", m},
@@ -60,7 +60,7 @@ if core.get_modpath("3d_armor") then
 			{m, m, m},
 		},
 	})
-	minetest.register_craft({
+	core.register_craft({
 		output = "3d_armor:leggings_"..s,
 		recipe = {
 			{m, m, m},
@@ -68,7 +68,7 @@ if core.get_modpath("3d_armor") then
 			{m, "", m},
 		},
 	})
-	minetest.register_craft({
+	core.register_craft({
 		output = "3d_armor:boots_"..s,
 		recipe = {
 			{m, "", m},
@@ -80,7 +80,7 @@ end
 if core.get_modpath('shields') then
     local k = "crystal"
 	local v = "ctg_sapphire:sapphire_block"
-	minetest.register_craft({
+	core.register_craft({
 		output = "shields:shield_"..k,
 		recipe = {
 			{v, v, v},

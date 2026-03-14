@@ -7,6 +7,41 @@ dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
 geodes_lib:register_geode({
+    id = 'ruby_marble',
+    wherein = "technic:marble",
+    y_min = -11000,
+    y_max = -5000,
+    scarcity = 40,
+    generation_chance = 100,
+    inner = "ctg_ruby:ruby",
+    inners = {{ name = "ctg_ruby:ruby", fill = 90 }, { name = "amethyst_new:calcite", fill = 10 }},
+    inner_alt = "ctg_ruby:ruby_budding",
+    inner_alt_chance = 50,
+    shell = {"technic:marble", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+    radius_min = 2,
+    radius_max = 7,
+})
+
+geodes_lib:register_geode({
+    id = 'ruby_stone',
+    wherein = "default:stone",
+    y_min = -10000,
+    y_max = -6000,
+    scarcity = 100,
+    generation_chance = 25,
+    inner = "ctg_ruby:ruby",
+    inners = {{ name = "ctg_ruby:ruby", fill = 100 }, { name = "amethyst_new:calcite", fill = 2 }},
+    inner_alt = "ctg_ruby:ruby_budding",
+    inner_alt_chance = 50,
+    shell = {"technic:marble", "amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+    radius_min = 3,
+    radius_max = 10,
+})
+
+--[[
+geodes_lib:register_geode({
     id = 'ruby_1',
     wherein = "default:stone",
     y_min = -3000,
@@ -53,7 +88,7 @@ geodes_lib:register_geode({
     cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 20, span = 20 },
     radius_min = 3,
     radius_max = 11,
-})
+})]]
 
 geodes_lib:register_geode({
     id = 'ruby_water',

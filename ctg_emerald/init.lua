@@ -7,6 +7,73 @@ dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
 geodes_lib:register_geode({
+    id = 'emerald_deep_stone',
+    wherein = "default:stone",
+    y_min = -10000,
+    y_max = -5000,
+    scarcity = 77,
+    generation_chance = 100,
+    inner = "ctg_emerald:emerald",
+    inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "amethyst_new:calcite", fill = 10 }},
+    inner_alt = "ctg_emerald:emerald_budding",
+    inner_alt_chance = 55,
+    shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+    radius_min = 3,
+    radius_max = 11,
+})
+geodes_lib:register_geode({
+    id = 'emerald_deep_granite',
+    wherein = "technic:granite",
+    y_min = -10000,
+    y_max = -5000,
+    scarcity = 77,
+    generation_chance = 100,
+    inner = "ctg_emerald:emerald",
+    inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "amethyst_new:calcite", fill = 10 }},
+    inner_alt = "ctg_emerald:emerald_budding",
+    inner_alt_chance = 55,
+    shell = {"technic:granite", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+    radius_min = 3,
+    radius_max = 11,
+})
+
+geodes_lib:register_geode({
+    id = 'emerald_shallow_stone',
+    wherein = "default:stone",
+    y_min = -5000,
+    y_max = -1000,
+    scarcity = 90,
+    generation_chance = 75,
+    inner = "ctg_emerald:emerald",
+    inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "ctg_quartz:quartz", fill = 30 }, { name = "amethyst_new:calcite", fill = 10 }},
+    inner_alt = {"ctg_emerald:emerald_budding", "ctg_quartz:quartz_budding"},
+    inner_alt_chance = 75,
+    shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 20, span = 20 },
+    radius_min = 3,
+    radius_max = 7,
+})
+geodes_lib:register_geode({
+    id = 'emerald_shallow_granite',
+    wherein = "technic:granite",
+    y_min = -5000,
+    y_max = -1000,
+    scarcity = 90,
+    generation_chance = 75,
+    inner = "ctg_emerald:emerald",
+    inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "ctg_quartz:quartz", fill = 20 }, { name = "amethyst_new:calcite", fill = 10 }},
+    inner_alt = {"ctg_emerald:emerald_budding", "ctg_quartz:quartz_budding"},
+    inner_alt_chance = 75,
+    shell = {"technic:granite", "amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+    cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 20, span = 20 },
+    radius_min = 3,
+    radius_max = 7,
+})
+
+--[[
+geodes_lib:register_geode({
     id = 'emerald_1',
     wherein = "default:stone",
     y_min = -3000,
@@ -54,6 +121,7 @@ geodes_lib:register_geode({
     radius_min = 3,
     radius_max = 11,
 })
+]]
 
 geodes_lib:register_geode({
     id = 'emerald_core',

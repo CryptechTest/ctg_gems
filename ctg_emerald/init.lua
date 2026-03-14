@@ -12,7 +12,7 @@ geodes_lib:register_geode({
     y_min = -10000,
     y_max = -5000,
     scarcity = 77,
-    generation_chance = 100,
+    generation_chance = 50,
     inner = "ctg_emerald:emerald",
     inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "amethyst_new:calcite", fill = 10 }},
     inner_alt = "ctg_emerald:emerald_budding",
@@ -38,6 +38,25 @@ geodes_lib:register_geode({
     radius_min = 3,
     radius_max = 11,
 })
+
+if core.get_modpath("deepslate") then
+    geodes_lib:register_geode({
+        id = 'emerald_deep_slate',
+        wherein = "deepslate:deepslate",
+        y_min = -10000,
+        y_max = -5000,
+        scarcity = 77,
+        generation_chance = 100,
+        inner = "ctg_emerald:emerald",
+        inners = {{ name = "ctg_emerald:emerald", fill = 80 }, { name = "amethyst_new:calcite", fill = 10 }},
+        inner_alt = "ctg_emerald:emerald_budding",
+        inner_alt_chance = 50,
+        shell = {"deepslate:deepslate", "amethyst_new:basalt", "amethyst_new:calcite"},
+        cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+        radius_min = 3,
+        radius_max = 10,
+    })
+end
 
 geodes_lib:register_geode({
     id = 'emerald_shallow_stone',

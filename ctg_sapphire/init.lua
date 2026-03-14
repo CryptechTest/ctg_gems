@@ -6,13 +6,32 @@ dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
+if core.get_modpath("deepslate") then
+    geodes_lib:register_geode({
+        id = 'sapphire_deep_slate',
+        wherein = "deepslate:deepslate",
+        y_min = -11000,
+        y_max = -7000,
+        scarcity = 70,
+        generation_chance = 100,
+        inner = "ctg_sapphire:sapphire",
+        inners = {{ name = "ctg_sapphire:sapphire", fill = 90 }, { name = "ctg_quartz:quartz", fill = 10 }},
+        inner_alt = {"ctg_sapphire:sapphire_budding", "ctg_quartz:quartz_budding"},
+        inner_alt_chance = 40,
+        shell = {"amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+        cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 35, span = 30 },
+        radius_min = 3,
+        radius_max = 10,
+    })
+end
+
 geodes_lib:register_geode({
     id = 'sapphire_deep',
     wherein = "default:stone",
     y_min = -11000,
     y_max = -7000,
-    scarcity = 70,
-    generation_chance = 100,
+    scarcity = 75,
+    generation_chance = 50,
     inner = "ctg_sapphire:sapphire",
     inners = {{ name = "ctg_sapphire:sapphire", fill = 90 }, { name = "ctg_quartz:quartz", fill = 10 }},
     inner_alt = {"ctg_sapphire:sapphire_budding", "ctg_quartz:quartz_budding"},

@@ -6,6 +6,26 @@ dofile(modpath.."/nodes.lua")
 dofile(modpath.."/crafting.lua")
 dofile(modpath.."/budding.lua")
 
+
+if core.get_modpath("deepslate") then
+    geodes_lib:register_geode({
+        id = 'ruby_stone',
+        wherein = "deepslate:deepslate",
+        y_min = -10000,
+        y_max = -6000,
+        scarcity = 90,
+        generation_chance = 30,
+        inner = "ctg_ruby:ruby",
+        inners = {{ name = "ctg_ruby:ruby", fill = 100 }, { name = "amethyst_new:calcite", fill = 2 }},
+        inner_alt = "ctg_ruby:ruby_budding",
+        inner_alt_chance = 50,
+        shell = {"deepslate:deepslate", "amethyst_new:basalt", "amethyst_new:basalt", "amethyst_new:calcite"},
+        cavity = { lower_fill = "default:river_water_source", upper_fill = "air", threshold = 30, span = 30 },
+        radius_min = 3,
+        radius_max = 10,
+    })
+end
+
 geodes_lib:register_geode({
     id = 'ruby_marble',
     wherein = "technic:marble",
@@ -29,7 +49,7 @@ geodes_lib:register_geode({
     y_min = -10000,
     y_max = -6000,
     scarcity = 100,
-    generation_chance = 25,
+    generation_chance = 20,
     inner = "ctg_ruby:ruby",
     inners = {{ name = "ctg_ruby:ruby", fill = 100 }, { name = "amethyst_new:calcite", fill = 2 }},
     inner_alt = "ctg_ruby:ruby_budding",
